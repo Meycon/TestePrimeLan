@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">PrimeCep</string>
+	<string name="uf">UF</string>
+	<string name="cep">POCKET:</string>
+	<string name="voltar">Come back</string>
+	<string name="bairro">Neighborhood</string>
+	<string name="label_cep">POCKET</string>
+	<string name="digite_o_cep">Enter the zip code</string>
+	<string name="logo_primelan">PrimeLan Logo</string>
+	<string name="informacoes_endereco">Address Information</string>
+	<string name="logradouro">Public place</string>
+	<string name="consultar">Consult</string>
+	<string name="sem_resultados_busca">No results were found.</string>
+	<string name="localidade">First Name</string>
+	<string name="nao_encontrados">No data found!</string>
+	<string name="tentar_novamente">Try again</string>
+	<string name="campo_obrigatorio">Required field!</string>
+	<string name="campo_corretamente">Correctly enter the zip code</string>
+</resources>

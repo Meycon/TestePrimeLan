@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        card_view:cardCornerRadius="10dp"
+        card_view:cardElevation="5dp"
+        card_view:cardUseCompatPadding="true"
+        android:id="@+id/cardViewEndereco"
+        tools:context=".ui.fragments.EnderecoFragment"
+        android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout
+            android:paddingBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <TextView
+            tools:text="Vitória"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/localidade"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintStart_toEndOf="@+id/label_localidade"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_localidade"/>
+
+    <TextView
+            android:text="@string/localidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/label_localidade"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textStyle="bold"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/label_logradouro"/>
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="@string/informacoes_endereco"
+                android:id="@+id/text_title"
+                android:gravity="center"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+            android:text="@string/logradouro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/label_logradouro"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textStyle="bold"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/text_title"/>
+
+    <TextView
+            tools:text="Travessa Santuário"
+            android:layout_width="299dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/logradouro"
+            app:layout_constraintStart_toEndOf="@+id/label_logradouro"
+            android:layout_marginStart="8dp" android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/text_title"/>
+
+    <TextView
+            android:text="@string/uf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/label_uf"
+            android:layout_marginTop="8dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/label_localidade" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"/>
+    <TextView
+            tools:text="ES"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/uf" app:layout_constraintStart_toEndOf="@+id/label_uf"
+            android:layout_marginStart="8dp" app:layout_constraintBaseline_toBaselineOf="@+id/label_uf"/>
+    <TextView
+            android:text="@string/bairro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/label_bairro"
+            android:layout_marginTop="8dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/label_uf" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"/>
+    <TextView
+            tools:text="Santo Antônio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bairro"
+            app:layout_constraintStart_toEndOf="@+id/label_bairro"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_bairro"/>
+    <TextView
+            android:text="@string/label_cep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/label_cep"
+            android:layout_marginTop="8dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/label_bairro" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"/>
+    <TextView
+            tools:text="29026-451"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cep"
+            app:layout_constraintStart_toEndOf="@+id/label_cep"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_cep"/>
+
+        <ImageView
+                android:id="@+id/mapGPS"
+                android:src="@drawable/ic_near"
+                android:layout_width="41dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="84dp"
+                app:layout_constraintTop_toBottomOf="@+id/text_title" app:layout_constraintStart_toEndOf="@+id/bairro"
+                android:layout_marginStart="116dp" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp" app:layout_constraintHorizontal_bias="0.077"/>
+
+    <android.support.constraint.Group
+            android:id="@+id/grupo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="logradouro, label_logradouro,
+            localidade, label_localidade, cep, label_cep, uf, label_uf, bairro, label_bairro, mapGPS"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>

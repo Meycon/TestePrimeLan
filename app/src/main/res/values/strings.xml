@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">PrimeCep</string>
+    <string name="uf">UF</string>
+    <string name="cep">CEP:</string>
+    <string name="voltar">Voltar</string>
+    <string name="bairro">Bairro</string>
+    <string name="label_cep">CEP</string>
+    <string name="digite_o_cep">Digite o CEP</string>
+    <string name="logo_primelan">Logo PrimeLan</string>
+    <string name="informacoes_endereco">Informações do Endereço</string>
+    <string name="logradouro">Logradouro</string>
+    <string name="consultar">Consultar</string>
+    <string name="sem_resultados_busca">Nenhum resultado foi encontrado</string>
+    <string name="localidade">Localidade</string>
+    <string name="nao_encontrados">Dados não encontrados!</string>
+    <string name="tentar_novamente">Tentar novamente</string>
+    <string name="campo_obrigatorio">Campo obrigatório!</string>
+    <string name="campo_corretamente">Digite corretamente o CEP</string>
+</resources>

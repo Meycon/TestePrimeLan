@@ -1,0 +1,78 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.meycon.primecep"
+        minSdkVersion 18
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0.0" // Versionamento Semântico [MAJOR, MINOR, PATCH]
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        debug {
+            debuggable true
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+
+    flavorDimensions "unico"
+
+    // Configuração de Flavors
+    productFlavors {
+        primeCep {
+            targetSdkVersion 28
+            minSdkVersion 18
+            applicationId 'com.meycon.primecep'
+            applicationIdSuffix ".primecep"
+            versionCode 1
+            versionName '1.0.0'
+            versionNameSuffix "-primecep"
+            dimension "unico"
+        }
+    }
+
+}
+
+dependencies {
+    // Toast e Dialog
+    implementation 'com.github.f0ris.sweetalert:library:1.5.6'
+    implementation 'com.github.GrenderG:Toasty:1.4.1'
+
+    // Teste
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    // Android Architecture Components (ViewModel e LiveData)
+    implementation 'android.arch.lifecycle:extensions:1.1.1'
+    annotationProcessor 'android.arch.lifecycle:compiler:1.1.1'
+    testImplementation 'android.arch.core:core-testing:1.1.1'
+
+    // Kotlin, Retrofit e Gson
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.21'
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+
+    // Android Support
+    implementation 'com.android.volley:volley:1.1.1'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestImplementation 'com.android.support.test:rules:1.0.2'
+}
